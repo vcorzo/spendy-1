@@ -1,0 +1,271 @@
+/* ------------------------------------------------------------------ */
+/* Hero v2                                                             */
+/* ------------------------------------------------------------------ */
+
+.hero-v2 {
+    padding: 5rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-v2-content {
+    text-align: center;
+    max-width: 640px;
+    margin-bottom: 3rem;
+}
+
+.hero-v2-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-light);
+    border: 1px solid rgba(26, 71, 42, 0.18);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+}
+
+.hero-v2-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.hero-v2-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+}
+
+.hero-v2-accent {
+    display: block;
+    color: var(--accent);
+}
+
+.hero-v2-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+.hero-v2-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* reset button default styles so btn-primary works on <button> */
+.hero-v2-actions button.btn-primary {
+    font-family: var(--font-body);
+    line-height: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Browser mock visual                                                 */
+/* ------------------------------------------------------------------ */
+
+.hero-v2-visual {
+    width: 100%;
+    max-width: 700px;
+}
+
+.mock-browser {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.mock-browser-bar {
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--border);
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.mock-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.mock-dot-red    { background: #ff5f57; }
+.mock-dot-yellow { background: #febc2e; }
+.mock-dot-green  { background: #28c840; }
+
+.mock-browser-body { padding: 1.5rem; }
+
+.mock-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mock-stat {
+    background: var(--paper);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.mock-stat-label {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.mock-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--ink);
+    line-height: 1.1;
+}
+
+.mock-stat-note {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+}
+
+.mock-stat-note.positive { color: var(--accent); }
+
+.mock-bars-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.mock-bar-row-v2 {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mock-cat-v2 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.mock-bar-track-v2 {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mock-bar-v2 {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-orange { background: #f59e0b; }
+.bar-blue   { background: #3b82f6; }
+.bar-purple { background: #8b5cf6; }
+
+/* ------------------------------------------------------------------ */
+/* Video modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 820px;
+    background: #000;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    transform: scale(0.97);
+    transition: transform 0.2s ease;
+}
+
+.modal-overlay.is-open .modal-container {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.modal-close:hover { background: rgba(255, 255, 255, 0.28); }
+
+.modal-video-wrapper {
+    aspect-ratio: 16 / 9;
+}
+
+.modal-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero-v2 { padding: 3rem 1rem 2.5rem; }
+
+    .mock-stats { grid-template-columns: 1fr 1fr; }
+    .mock-stats .mock-stat:last-child { display: none; }
+}
