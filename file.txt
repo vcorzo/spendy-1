@@ -31,7 +31,7 @@ footer link href from "#" to "/terms".
 
 ****
 
-!git add .
+! git add .
 
 ! git commit -m "landing: add terms and conditions page and route"
 
@@ -54,7 +54,7 @@ footer link href from "#" to "/privacy".
 ****
 ! git add .
 
-!git commit -m "landing: add privacy policy page and route”
+! git commit -m "landing: add privacy policy page and route"
 
 ****
 
